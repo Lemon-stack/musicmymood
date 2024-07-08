@@ -102,6 +102,9 @@ export default function Login() {
             <img className="size-7 mr-1" src="/google.svg" alt="" />
             Continue with google</button>
         </form>
+        <p className="text-light text-gray-600 mt-2 text-sm">
+              Don&apost have an account? <a href="/signup" className="hover:text-purple text-purple/70">Signup</a>
+            </p>
         </div>
       </div>
     </>

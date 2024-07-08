@@ -6,7 +6,7 @@ export default function Home() {
   return (
   <>
   <Nav/>
-  <div className="bg-blk text-white w-full h-screen flex">
+  <div className="bg-blk text-white w-full h-screen flex justify-center">
     
     <Player/>
     <RightNav/>
