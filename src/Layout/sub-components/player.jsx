@@ -22,10 +22,8 @@ export default function Player() {
         </svg>
 
         <div className="relative flex justify-center items-center mx-14">
-          <img
+          <span
             className="bg-gray-900/50 size-48 rounded-full"
-            src="/boy.png"
-            alt=""
           />
           <p className="bg-purple/50 p-14 bg-opacity-5 absolute rounded-full">
 

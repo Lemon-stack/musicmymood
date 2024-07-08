@@ -100,19 +100,19 @@ export default function Signup() {
             <Input type="password" ref={passwordRef} placeholder="password" />
             <button
               type="submit"
-              className="font-semibold py-1 mt-5 bg-purple hover:bg-purple/90 transition-all ease-in rounded-lg text-white flex justify-center items-center"
+              className="py-1 mt-5 bg-purple hover:bg-purple/90 transition-all ease-in rounded-lg text-white flex justify-center items-center"
             >
               Signup
             </button>
             <button
               onClick={SigninWithGoogle}
-              className="border border-purple font-semibold flex justify-center items-center text-purple mt-2 py-0.5 rounded-lg"
+              className="border border-purple flex justify-center items-center text-purple mt-2 py-0.5 rounded-lg"
             >
               <img className="size-7 mr-1" src="/google.svg" alt="" />
               Continue with google
             </button>
             <p className="text-light text-gray-600 mt-2 text-sm">
-              Already have an account? <a href="/login">Login</a>
+              Already have an account? <a href="/login" className="hover:text-purple text-purple/70">Login</a>
             </p>
           </form>
         </div>
