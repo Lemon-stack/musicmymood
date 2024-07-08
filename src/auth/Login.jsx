@@ -101,10 +101,10 @@ export default function Login() {
           className="border border-purple font-semibold flex justify-center items-center text-purple mt-2 py-0.5 rounded-lg">
             <img className="size-7 mr-1" src="/google.svg" alt="" />
             Continue with google</button>
-        </form>
         <p className="text-light text-gray-600 mt-2 text-sm">
-              Don&apost have an account? <a href="/signup" className="hover:text-purple text-purple/70">Signup</a>
+              Don&apos;t have an account? <a href="/signup" className="hover:text-purple text-purple/70">Signup</a>
             </p>
+        </form>
         </div>
       </div>
     </>
