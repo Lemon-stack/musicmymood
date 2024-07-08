@@ -7,6 +7,7 @@ export default function Home() {
   <>
   <Nav/>
   <div className="bg-blk text-white w-full h-screen flex">
+    
     <Player/>
     <RightNav/>
   </div>
