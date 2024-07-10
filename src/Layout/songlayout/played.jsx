@@ -1,16 +1,20 @@
 export default function Played() {
   return (
-    <div className="flex justify-between bg-white w-full rounded-lg shadow-lg p-3 min-h-44 sticky top-10">
-      <section className="flex flex-col justify-start pl-6 py-4">
-        <p className="bg-muted rounded-md text-sm font-semibold py-1.5 text-gray-500 mb-2">Now playing</p>
-        <h2 className="text-start font-semibold text-3xl text-purple">
+    <div className="flex lg:justify-between bg-purple/40 w-full rounded-xl shadow-lg z-10 backdrop-blur-3xl p-3 lg:min-h-44 sticky top-16">
+      <section className="flex min-w-[55%] lg:min-w-[30%] flex-col justify-start px-4 py-4">
+        <p className="bg-muted rounded-md text-sm font-semibold py-1.5 text-purple mb-2">
+          Now playing
+        </p>
+        <h2 className="text-start font-semibold text-2xl lg:text-3xl text-gray-50">
           Holla mood
         </h2>
-        <p className="text-start font-light">Hallis ft mid-wayne</p>
+        <p className="text-start font-light text-sm lg:text-md text-gray-200/60">
+          Hallis ft mid-wayne
+        </p>
       </section>
 
       {/* player controls */}
-      <section className="relative flex justify-center items-center min-w-64 rounded-md min-h-40">
+      <section className="relative min-w-[45%] flex justify-center items-center lg:min-w-64 rounded-md lg:min-h-40">
         {/* previous */}
         <div className="z-10 flex justify-center items-center">
           <svg
@@ -19,7 +23,7 @@ export default function Played() {
             viewBox="0 0 24 24"
             strokeWidth={1.2}
             stroke="currentColor"
-            className="size-6 text-purple"
+            className="size-6 text-gray-50"
           >
             <path
               strokeLinecap="round"
@@ -29,7 +33,7 @@ export default function Played() {
           </svg>
 
           {/* play */}
-          <div className="p-4 rounded-full flex justify-center items-center mx-4 bg-purple border-[2rem] border-gray-50">
+          <div className="p-2 lg:p-4 rounded-full flex justify-center items-center mx-2 lg:mx-4 bg-purple border-2 lg:border-[2rem] border-gray-50">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -52,7 +56,7 @@ export default function Played() {
             viewBox="0 0 24 24"
             strokeWidth={1.2}
             stroke="currentColor"
-            className="size-6 text-purple"
+            className="size-6 text-gray-50"
           >
             <path
               strokeLinecap="round"
