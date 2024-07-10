@@ -3,8 +3,8 @@ import "./App.css";
 import { Routes, Route, Outlet } from "react-router-dom";
 import { Hero, Home } from "./Routes/index";
 import AuthProvider from "./context/Authcontext";
-const Spinner = lazy(()=> import("./Layout/sub-components/Spinner")) 
-import { Login,Signup } from "./auth/index";
+const Spinner = lazy(() => import("./Layout/sub-components/Spinner"));
+import { Login, Signup } from "./auth/index";
 import PrivateRoute from "./context/PrivateRoute";
 function App() {
   return (
