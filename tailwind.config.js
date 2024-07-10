@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
-import tailwindcssAnimate from 'tailwindcss-animate';
+import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
   darkMode: ["class"],
   content: [
-    './src/**/*.{js,jsx,ts,tsx}', // Adjust the paths according to your project structure
-    './node_modules/shadcn/dist/**/*.{js,jsx,ts,tsx}', // Include shadcn paths if needed
+    "./src/**/*.{js,jsx,ts,tsx}", // Adjust the paths according to your project structure
+    "./node_modules/shadcn/dist/**/*.{js,jsx,ts,tsx}", // Include shadcn paths if needed
   ],
   theme: {
     container: {
@@ -17,8 +17,9 @@ export default {
     },
     extend: {
       colors: {
-        purple:"#7b2cbf",
-        blk:"#0b090a",
+        purple: "#7b2cbf",
+        lightBlk: "#110e0f",
+        blk: "#0b090a",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -75,4 +76,4 @@ export default {
     },
   },
   plugins: [tailwindcssAnimate],
-}
+};

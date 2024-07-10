@@ -1,6 +1,6 @@
 export default function Rightnav() {
   return (
-    <div className="bg-blk/95 w-[25%] flex flex-col h-full fixed right-3 rounded-xl text-gray-50 p-3.5">
+    <div className="w-[25%] flex flex-col h-full fixed right-3 rounded-xl bg-lightBlk text-gray-50 p-3.5">
       <div className="flex items-start mb-3">
         <p className="text-purple font-semibold">Queue</p>
         {/* shuffle */}

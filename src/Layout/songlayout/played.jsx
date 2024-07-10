@@ -1,6 +1,6 @@
 export default function Played() {
   return (
-    <div className="flex lg:justify-between bg-purple/40 w-full rounded-xl shadow-lg z-10 backdrop-blur-3xl p-3 lg:min-h-44 sticky top-16">
+    <div className="flex lg:justify-between bg-gradient-to-r from-purple/90 from-15% to-purple to-45% w-full rounded-xl shadow-lg z-10 backdrop-blur-3xl p-3 lg:min-h-44 sticky top-16">
       <section className="flex min-w-[55%] lg:min-w-[30%] flex-col justify-start px-4 py-4">
         <p className="bg-muted rounded-md text-sm font-semibold py-1.5 text-purple mb-2">
           Now playing

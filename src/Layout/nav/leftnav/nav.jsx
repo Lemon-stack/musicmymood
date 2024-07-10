@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 export default function Nav() {
   return (
-    <div className="hidden lg:flex lg:w-[20%] flex-col bg-blk/95 min-h-screen fixed pl-5 py-6 text-white">
+    <div className="lg:flex lg:w-[20%] flex-col min-h-screen fixed pl-5 py-6 text-gray-50">
       <div>
         <p className="text-purple font-bold text-start">
           <span className="text-white">.</span>musicmymood
@@ -20,12 +20,12 @@ export default function Nav() {
               };
             }}
           >
-            <li className="flex text-md hover:text-white hover:bg-purple/10 p-2 mb-2 items-start justify-start rounded-s-xl transition-all ease-in hover:border-white">
+            <li className="flex text-md font-semibold hover:text-purple hover:bg-gray-50 p-2 mb-2 items-start justify-start rounded-s-xl transition-all ease-in hover:border-white">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                strokeWidth={1.5}
+                strokeWidth={2}
                 stroke="currentColor"
                 className="size-5 mr-2"
               >
@@ -41,12 +41,12 @@ export default function Nav() {
           <NavLink
             to=""
           >
-            <li className="flex text-md hover:text-white hover:bg-purple/10 p-2 mb-2 items-center justify-start rounded-s-xl transition-all ease-in hover:border-white">
+            <li className="flex text-md font-semibold hover:text-purple hover:bg-gray-50 p-2 mb-2 items-center justify-start rounded-s-xl transition-all ease-in hover:border-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              strokeWidth={1.5}
+              strokeWidth={2}
               stroke="currentColor"
               className="size-5 mr-2"
             >
