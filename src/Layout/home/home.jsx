@@ -12,10 +12,10 @@ export default function Home() {
 
         <div className="flex flex-col w-full bg-muted">
           <Topnav />
-          <section className="w-full h-full px-6">
-            <div className="flex w-full gap-5">
+          <section className="w-full h-full bg-blk px-6">
+            <div className="flex w-full gap-5 mt-2">
               <Container />
-              <div className="w-[35%]">
+              <div className="hidden lg:w-[35%] bg-blk/95">
               <Rightnav />
               </div>
             </div>
