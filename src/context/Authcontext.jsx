@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect, Suspense, lazy } from "react";
-const Spinner = lazy(()=>import ('../Layout/sub-components/Spinner'))
+const Spinner = lazy(() => import("../Layout/sub-components/Spinner"));
 import { auth } from "../client/client";
 import {
   createUserWithEmailAndPassword,
