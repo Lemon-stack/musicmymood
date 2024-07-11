@@ -1,6 +1,6 @@
 export default function Rightnav() {
   return (
-    <div className="w-[25%] flex flex-col h-full fixed right-3 rounded-xl bg-lightBlk text-gray-50 p-3.5">
+    <div className="w-[25%] flex flex-col h-full fixed right-3 rounded-xl bg-lightBlk mt-6 text-gray-50 px-5 py-3">
       <div className="flex items-start mb-3">
         <p className="text-purple font-semibold">Queue</p>
         {/* shuffle */}
@@ -32,9 +32,11 @@ export default function Rightnav() {
           <path d="M5.055 7.06C3.805 6.347 2.25 7.25 2.25 8.69v8.122c0 1.44 1.555 2.343 2.805 1.628L12 14.471v2.34c0 1.44 1.555 2.343 2.805 1.628l7.108-4.061c1.26-.72 1.26-2.536 0-3.256l-7.108-4.061C13.555 6.346 12 7.249 12 8.689v2.34L5.055 7.061Z" />
         </svg>
       </div>
-      <section className="flex">
+
+      <div className="overflow-y-scroll pb-12 pt-4 w-full">
+      <section className="flex mb-2">
         <img
-          className="size-14 object-cover rounded-sm"
+          className="size-14 object-cover rounded-full"
           src="/musicThumbnail.jpg"
           alt="music-thumbnail"
         />
@@ -43,6 +45,8 @@ export default function Rightnav() {
           <p className="text-sm font-light text-gray-600">Kiddo mane</p>
         </div>
       </section>
+     
+      </div>
     </div>
   );
 }
