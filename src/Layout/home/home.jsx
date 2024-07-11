@@ -5,8 +5,9 @@ import Container from "../songlayout/container";
 export default function Home() {
   return (
     <>
-      <div className="flex">
-        <div className="lg:w-[25%]">
+      <div className="flex bg-blk h-screen w-full">
+        <div className="hidden lg:block bg-lightBlk lg:w-[25%]">
+          {/* left nav */}
           <Nav />
         </div>
 
@@ -15,8 +16,8 @@ export default function Home() {
           <section className="w-full h-full bg-blk px-6">
             <div className="flex w-full gap-5 mt-2">
               <Container />
-              <div className="hidden lg:w-[35%] bg-blk/95">
-              <Rightnav />
+              <div className="hidden lg:flex lg:w-[35%]">
+                <Rightnav />
               </div>
             </div>
           </section>
