@@ -1,71 +1,77 @@
+import { Progress } from "@/components/ui/progress";
+import { useEffect, useState } from "react";
+
 export default function Played() {
+  const [progress, setProgress] = useState(13)
+ 
+  useEffect(() => {
+    const timer = setTimeout(() => setProgress(66), 500)
+    return () => clearTimeout(timer)
+  }, [])
   return (
-    <div className="flex lg:justify-between bg-gradient-to-r from-purple/90 from-15% to-purple to-45% w-full rounded-xl shadow-lg z-10 backdrop-blur-3xl p-3 lg:min-h-44 sticky top-16">
-      <section className="flex min-w-[55%] lg:min-w-[30%] flex-col justify-start px-4 py-4">
-        <p className="bg-muted rounded-md text-sm font-semibold py-1.5 text-purple mb-2">
-          Now playing
-        </p>
-        <h2 className="text-start font-semibold text-2xl lg:text-3xl text-gray-50">
-          Holla mood
-        </h2>
-        <p className="text-start font-light text-sm lg:text-md text-gray-200/60">
-          Hallis ft mid-wayne
-        </p>
-      </section>
-
-      {/* player controls */}
-      <section className="relative min-w-[45%] flex justify-center items-center lg:min-w-64 rounded-md lg:min-h-40">
-        {/* previous */}
-        <div className="z-10 flex justify-center items-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-            strokeWidth={1.2}
-            stroke="currentColor"
-            className="size-6 text-gray-50"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M21 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061A1.125 1.125 0 0 1 21 8.689v8.122ZM11.25 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061a1.125 1.125 0 0 1 1.683.977v8.122Z"
-            />
-          </svg>
-
-          {/* play */}
-          <div className="p-2 lg:p-4 rounded-full flex justify-center items-center mx-2 lg:mx-4 bg-purple border-2 lg:border-[2rem] border-gray-50">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-              strokeWidth={1.2}
-              stroke="currentColor"
-              className="size-6 text-white text-center"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z"
-              />
-            </svg>
-          </div>
-          {/* next */}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-            strokeWidth={1.2}
-            stroke="currentColor"
-            className="size-6 text-gray-50"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M3 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061A1.125 1.125 0 0 1 3 16.811V8.69ZM12.75 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061a1.125 1.125 0 0 1-1.683-.977V8.69Z"
-            />
-          </svg>
+    <div className="max-w-full shadow-lg overflow-hidden sticky top-[3.6rem]">
+      <div className="relative">
+        <img
+          src="https://images.unsplash.com/photo-1500099817043-86d46000d58f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&h=250&q=80"
+          className="object-cover"
+        />
+        <div className="absolute p-4 inset-0 flex flex-col justify-end bg-gradient-to-b from-transparent to-gray-900 backdrop backdrop-blur-5 text-white">
+          <h3 className="font-bold">Super Artist</h3>
+          <span className="opacity-70">Albumtitle</span>
         </div>
-      </section>
+      </div>
+      <div>
+       <Progress value={progress}/>
+      </div>
+      <div className="flex justify-between text-xs font-semibold bg-blk/80 backdrop-blur-2xl text-gray-50 px-4 py-2">
+        <div>1:50</div>
+        <div className="flex space-x-3 p-2">
+          <button className="focus:outline-none">
+            <svg
+              className="w-4 h-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <polygon points="19 20 9 12 19 4 19 20" />
+              <line x1={5} y1={19} x2={5} y2={5} />
+            </svg>
+          </button>
+          {/* play button */}
+          <button className="rounded-full w-8 h-8 flex items-center justify-center pl-0.5 ring-2 ring-purple focus:outline-none">
+            <svg
+              className="w-5 h-5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg>
+          </button>
+          <button className="focus:outline-none">
+            <svg
+              className="w-4 h-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <polygon points="5 4 15 12 5 20 5 4" />
+              <line x1={19} y1={5} x2={19} y2={19} />
+            </svg>
+          </button>
+        </div>
+        <div>3:00</div>
+      </div>
+      
     </div>
   );
 }
