@@ -21,7 +21,7 @@ export default function Played() {
         </div>
       </div>
       <div>
-       <Progress value={progress} className=""/>
+       <Progress value={progress}/>
       </div>
       <div className="flex justify-between text-xs font-semibold bg-blk/80 backdrop-blur-2xl text-gray-50 px-4 py-2">
         <div>1:50</div>
