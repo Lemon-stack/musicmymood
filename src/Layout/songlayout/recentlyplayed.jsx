@@ -9,14 +9,14 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export default function Recentlyplayed() {
   return (
-    <div className="mt-4 flex flex-col w-full h-full gap-3 justify-center">
-      <h2 className="text-start font-semibold text-gray-50 pl-2">
+    <div className="flex flex-col lg:absolute bottom-3 left-24 lg:min-h-56 px-2 lg:rounded-xl bg-lightBlk justify-center">
+      <h2 className="text-start lg:font-semibold -mb-3 lg:mb-0 bg-gray-50/5 max-w-36 rounded-md py-0.5 text-gray-50 -translate-y-5 lg:-translate-y-7 pl-3">
         Recently Played
       </h2>
-      <Carousel className="max-w-[40rem] mr-2 lg:mr-4 ml-2">
+      <Carousel className="max-w-[40rem] mr-2 mb-3 lg:mr-2 ml-2">
         <CarouselContent className="-ml-1">
           {Array.from({ length: 6 }).map((_, index) => (
-            <CarouselItem key={index} className="pl-1 basis-1/2 md:basis-1/3 lg:w-1/2">
+            <CarouselItem key={index} className="pl-1 w-full basis-1/2 lg:basis-1/4 lg:w-1/2">
               <div className="p-1">
                 <Card>
                   <CardContent className="flex aspect-square items-center justify-center">
@@ -30,7 +30,7 @@ export default function Recentlyplayed() {
                         />
                       </div>
                       <div className="absolute bottom-0 z-20 m-0 pb-3 ps-3 transition duration-300 ease-in-out group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:scale-100">
-                        <h1 className="text-start text-lg -mb-1 lg:-mb-2 font-bold text-white shadow-xl">
+                        <h1 className="text-start text-lg -mb-1 lg:-mb-2 font-semibold text-white shadow-xl">
                           Azores
                         </h1>
                         <h1 className="text-[13px] text-start leading-4 font-light text-gray-200 shadow-xl">
@@ -44,8 +44,8 @@ export default function Recentlyplayed() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="hidden lg:ml-5 text-blk" />
-        <CarouselNext className="hidden lg:mr-5 text-blk" />
+        <CarouselPrevious className="hidden lg:flex lg:ml-9 text-blk" />
+        <CarouselNext className="hidden lg:flex lg:mr-9 text-blk" />
       </Carousel>
     </div>
   );

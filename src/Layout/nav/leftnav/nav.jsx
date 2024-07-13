@@ -1,33 +1,26 @@
 import { NavLink } from "react-router-dom";
+
 export default function Nav() {
   return (
-    <div className="lg:flex lg:w-[20%] flex-col min-h-full fixed pl-5 py-6 text-gray-50">
-      <div>
-        <p className="text-purple font-bold text-start">
-          <span className="text-white">.</span>musicmymood
-        </p>
-      </div>
 
-      <section className="mt-8">
-        <ul>
+      <section className="lg:w-[5.7%] min-h-screen bg-lightBlk h-full z-20 items-center flex-col fixed left-0 pt-24 text-gray-50">
+        <ul className=" flex flex-col items-center">
           <NavLink
             to="/dashboard"
             style={({ isActive }) => {
               return {
                 color: isActive ? "#7b2cbf" : "#fff",
-                borderColor: isActive ? "#7b2cbf" : "#fff",
-                backgroundColor: isActive ? "#fff" : "transparent",
               };
             }}
           >
-            <li className="flex text-md font-semibold hover:text-purple hover:border-r hover:border-r-gray-50 p-2 mb-2 items-start justify-start transition-all ease-in hover:border-white">
+            <li className="flex text-md hover:text-purple hover:border-r hover:border-r-gray-50 mb-12 justify-center transition-all ease-in hover:border-white">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={2}
                 stroke="currentColor"
-                className="size-5 mr-2"
+                className="size-6 mr-2"
               >
                 <path
                   strokeLinecap="round"
@@ -35,34 +28,28 @@ export default function Nav() {
                   d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
                 />
               </svg>
-              Home
             </li>
           </NavLink>
-          <NavLink
-            to=""
-          >
-            <li className="flex text-md font-semibold hover:border-r hover:border-r-gray-50 p-2 mb-2 items-center justify-start transition-all ease-in hover:border-white">
+
+          {/* saved */}
+          <li className="flex text-md hover:text-purple hover:border-r hover:border-r-gray-50 mb-10 justify-center transition-all ease-in hover:border-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              strokeWidth={2}
+              strokeWidth={1.5}
               stroke="currentColor"
-              className="size-5 mr-2"
+              className="size-6 mr-2"
             >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z"
               />
             </svg>
-              Favourites
-            </li>
-          </NavLink>
-
-          
+          </li>
+       
         </ul>
       </section>
-    </div>
   );
 }

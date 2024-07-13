@@ -13,12 +13,19 @@ export default {
       padding: "2rem",
       screens: {
         "2xl": "1400px",
+        'sm': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+      'xl': '1280px',
+      // => @media (min-width: 1280px) { ... }
       },
     },
     extend: {
       colors: {
         purple: "#7b2cbf",
-        lightBlk: "#110e0f",
+        lightBlk: "#0f0f0f",
         blk: "#0b090a",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
