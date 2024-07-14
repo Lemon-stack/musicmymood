@@ -11,6 +11,7 @@ export default function Played() {
   return (
     <div className="w-full relative shadow-lg overflow-hidden lg:min-h-96 mb-0">
       <Progress value={43}/>
+      
       <div className="relative">
         <img
           src="https://images.unsplash.com/photo-1500099817043-86d46000d58f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&h=250&q=80"
