@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/sheet";
 import { NavLink } from "react-router-dom";
 import Contact from "@/Layout/sub-components/contact";
+import SpotifyRedirect from "@/Layout/sub-components/spotifyRedirect";
 // import { Badge } from "@/components/ui/badge";
 
 export default function Topnav() {
@@ -39,7 +40,9 @@ export default function Topnav() {
         </SheetTrigger>
         <SheetContent className="text-gray-50">
           <SheetHeader>
-            <h2><span className="text-purple">. </span>musicmymood</h2>
+            <h2>
+              <span className="text-purple">. </span>musicmymood
+            </h2>
           </SheetHeader>
           {/* links */}
           <ul className=" flex flex-col items-start mt-8">
@@ -124,35 +127,7 @@ export default function Topnav() {
         </SheetContent>
       </Sheet>
       <div className="flex justify-evenly items-center">
-        {/* mood picker */}
-        {/* <Popover>
-          <PopoverTrigger className="py-1.5 text-sm font-semibold px-6 rounded-lg bg-gray-50 text-purple mr-2 animate-shake">
-            Your mood?
-          </PopoverTrigger>
-          <PopoverContent className="border-0">
-            <div className="grid p-2 grid-cols-3 lg:grid-cols-3 gap-3">
-              <Badge className="bg-green-500 py-1 text-sm px-12 flex justify-center items-center">
-                Normal
-              </Badge>
-              <Badge className="bg-red-500 py-1 text-sm px-12 flex justify-center items-center">
-                Angry
-              </Badge>
-              <Badge className="bg-gray-500 py-1 text-sm px-12 flex justify-center items-center">
-                Depressed
-              </Badge>
-              <Badge className="bg-yellow-500 py-1 text-sm px-12 flex justify-center items-center">
-                Happy
-              </Badge>
-              <Badge className="bg-blue-500 py-1 text-sm px-12 flex justify-center items-center">
-                Calm
-              </Badge>
-              <Badge className="bg-stone-500 py-1 text-sm px-12 flex justify-center items-center">
-                Stressed
-              </Badge>
-            </div>
-          </PopoverContent>
-        </Popover> */}
-
+        <SpotifyRedirect/>
         <svg
           className="w-6 h-6 mr-2 text-gray-50 cursor-pointer"
           aria-hidden="true"

@@ -4,6 +4,7 @@ import { Routes, Route, Outlet } from "react-router-dom";
 import { Hero, Home } from "./Routes/index";
 import AuthProvider from "./context/Authcontext";
 const Spinner = lazy(() => import("./Layout/sub-components/Spinner"));
+const CallBack = lazy(() => import("./Layout/Callback"));
 import { Login, Signup } from "./auth/index";
 import PrivateRoute from "./context/PrivateRoute";
 function App() {
@@ -21,6 +22,7 @@ function App() {
                 <Route index element={<Home />} />
               </Route>
 
+              <Route path="/c" element={<CallBack />} />
               <Route path="login" element={<Login />} />
               <Route path="signup" element={<Signup />} />
             </Route>

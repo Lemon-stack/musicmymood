@@ -19,6 +19,7 @@ export default function AuthProvider({ children }) {
   const [currentUser, setCurrentUser] = useState(null);
   console.log(currentUser);
   const [loading, setLoading] = useState(true);
+  const [Spotifyprofile, setSpotifyProfile] = useState(null);
 
   function signup(email, password) {
     return createUserWithEmailAndPassword(auth, email, password);
@@ -39,7 +40,33 @@ export default function AuthProvider({ children }) {
     return sendPasswordResetEmail(auth, email);
   };
 
+
   useEffect(() => {
+//     const token = localStorage.getItem('spotifyToken');
+
+//     if (token) {
+//       fetch('https://api.spotify.com/v1/me', {
+//         headers: {
+//           Authorization: `Bearer ${token}`
+//         }
+//       })
+//         .then(response => response.json())
+//         .then(data => setSpotifyProfile(data))
+//         .catch(err => console.error(err));
+//     }
+// console.log(Spotifyprofile.display_name)
+
+
+  let accessToken = localStorage.getItem('spotifyToken');
+ console.log(accessToken)
+  // const response = await fetch('https://api.spotify.com/v1/me', {
+  //   headers: {
+  //     Authorization: 'Bearer ' + accessToken
+  //   }
+  // });
+
+  // const data = await response.json();
+
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (!user) {
         setCurrentUser(null);
@@ -52,6 +79,8 @@ export default function AuthProvider({ children }) {
     // console.log(currentUser, "current user ")
     return () => unsubscribe();
   }, [currentUser]);
+
+
 
   const value = {
     currentUser,

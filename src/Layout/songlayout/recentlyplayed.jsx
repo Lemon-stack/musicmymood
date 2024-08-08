@@ -16,7 +16,10 @@ export default function Recentlyplayed() {
       <Carousel className="max-w-[40rem] mr-2 mb-3 lg:mr-2 ml-2">
         <CarouselContent className="-ml-1">
           {Array.from({ length: 6 }).map((_, index) => (
-            <CarouselItem key={index} className="pl-1 w-full basis-1/2 lg:basis-1/4 lg:w-1/2">
+            <CarouselItem
+              key={index}
+              className="pl-1 w-full basis-1/2 lg:basis-1/4 lg:w-1/2"
+            >
               <div className="p-1">
                 <Card>
                   <CardContent className="flex aspect-square items-center justify-center">
